@@ -3,7 +3,7 @@
 from setuptools import setup
 
 dependencies = [
-    'hyper>=0.7',
+    'hyper>=0.7.0+poly.2017.06.06.git411c1c9,<0.8.0',
     'PyJWT>=1.4.0',
     'cryptography>=1.7.2',
 ]
@@ -16,7 +16,7 @@ except ImportError:
 
 setup(
     name='apns2',
-    version='0.3.0',
+    version='0.3.0+poly.2017.06.06.git3e893ee',
     packages=['apns2'],
     install_requires=dependencies,
     url='https://github.com/Pr0Ger/PyAPNs2',
