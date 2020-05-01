@@ -53,9 +53,8 @@ class TokenCredentials(Credentials):
         token = self._get_or_create_topic_token(topic)
         return 'bearer %s' % token
 
-    @staticmethod
-    def _is_expired_token(issue_date):
-        return time.time() > issue_date + DEFAULT_TOKEN_LIFETIME
+    def _is_expired_token(self, issue_date):
+        return time.time() > issue_date + self.__token_lifetime
 
     @staticmethod
     def _get_signing_key(key_path):
